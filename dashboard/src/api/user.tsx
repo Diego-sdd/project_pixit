@@ -7,7 +7,6 @@ export async function LoginUser(data: Object) {
     });
     return result;
   } catch (error: any) {
-    console.log(error)
     return {
       status: error.response.status,
       msg: error.response.data.msg,

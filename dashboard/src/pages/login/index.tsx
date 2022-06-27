@@ -84,7 +84,6 @@ const Login = (porps: any) => {
       setErroDataLogin("Erro, tente novamente mais tarde");
       setErroInput(true);
       setLoading(false);
-      console.log(error);
     }
     return;
   };

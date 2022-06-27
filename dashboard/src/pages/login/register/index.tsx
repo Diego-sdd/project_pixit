@@ -15,9 +15,7 @@ import Input from "../../../component/input";
 
 import styles from "./styles.module.css";
 
-
 const Register = (porps: any) => {
-
   const navigate = useNavigate();
   const { setRegisterUser, setUserData, setUserDataToken } = porps;
 
@@ -31,7 +29,7 @@ const Register = (porps: any) => {
   const [erroConfirmPassword, setErroConfirmPassword] = useState<String>("");
   const [erroForm, setErroForm] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
-
+  const [erroDataLogin, setErroDataLogin] = useState<string>("");
   const handlerRegister = async () => {
     setLoading(true);
     let checkDate: number = 0;
@@ -64,6 +62,8 @@ const Register = (porps: any) => {
       setErroForm(true);
       setLoading(false);
       return;
+    } else {
+      setErroForm(false);
     }
 
     const dataUser = {
@@ -90,14 +90,27 @@ const Register = (porps: any) => {
 
         setUserData(dataUser);
         setUserDataToken(token);
+        setErroDataLogin("");
         navigate("/homePage");
+        return;
       }
-    } catch (error) {
+      if (resultUser.status === 409) {
+        setErroForm(true);
+        setLoading(false);
+        setErroDataLogin("");
+        setErroEmail("Já existe um cadastro com esse e-mail");
+        return;
+      }
+      setErroDataLogin("Erro, tente novamente mais tarde");
+      setErroForm(true);
       setLoading(false);
-      console.log(error);
+      return;
+    } catch (error) {
+      setErroDataLogin("Erro, tente novamente mais tarde");
+      setErroForm(true);
+      setLoading(false);
+      return;
     }
-
-    return;
   };
   return (
     <div>
@@ -142,7 +155,19 @@ const Register = (porps: any) => {
           setConfirmPassword(element.target.value);
         }}
       />
-
+      <br></br>
+      {erroForm && erroDataLogin !== "" && (
+        <p
+          style={{
+            color: "red",
+            fontSize: 13,
+            marginTop: -10,
+            marginBottom: 10,
+          }}
+        >
+          {erroDataLogin}
+        </p>
+      )}
       <br></br>
       <Button
         title={"Cadastrar"}

@@ -71,7 +71,6 @@ const Home = (props: any) => {
       }
     } catch (error) {
       setLoading(false);
-      console.log(error);
     }
   };
   useEffect(() => {
