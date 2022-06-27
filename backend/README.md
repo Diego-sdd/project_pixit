@@ -5,9 +5,9 @@
 </br>
 
 ## Prerequisites
-1 - Node (https://nodejs.org)
-2 - Yarn (https://classic.yarnpkg.com/en/) or Npm (https://classic.yarnpkg.com/en/)
-3 - Mysql (https://www.mysql.com/)
+<p>1 - Node (https://nodejs.org)</p>
+<p>2 - Yarn (https://classic.yarnpkg.com/en/) or Npm (https://classic.yarnpkg.com/en/)</p>
+<p>3 - Mysql (https://www.mysql.com/)</p>
 
 ## Technologies
 ```bash
