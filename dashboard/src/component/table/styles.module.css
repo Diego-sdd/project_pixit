@@ -1,0 +1,26 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table,
+th,
+td {
+  padding: 5px;
+  border: 0.5px solid rgb(175, 175, 175);
+  text-align: center;
+  font-size: 14px;
+  background: #ffffff;
+}
+.actionsTableTh {
+  width: 12%;
+}
+
+.table tr th {
+  background-color: var(--purple);
+  color: #ffffff;
+}
+.actionsTable svg {
+  cursor: pointer;
+  margin-left: 0.5rem;
+}

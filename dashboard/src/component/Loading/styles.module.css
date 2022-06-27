@@ -1,0 +1,12 @@
+.container{
+  background-color: rgba(30, 30, 30, 0.269);
+  position: fixed !important;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  text-align: -webkit-center;
+  left: 0;
+}
+.container svg {
+  margin-top: 50vh;
+}

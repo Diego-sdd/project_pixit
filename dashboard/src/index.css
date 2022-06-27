@@ -1,0 +1,29 @@
+:root {
+  --gradient-blue: linear-gradient(to right, #26B49A, #6ab6a8);
+  --white: #ffffff;
+  --purple: #7662F8;
+  --purpleBackground: #D6D5DE;
+  --title: #4b4b4b;
+  --black: #3b3b3b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--purpleBackground);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
